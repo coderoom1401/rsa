@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+      <script src="prng4.js"></script>
+      <script src="rng.js"></script>
+      <script  src="jsbn.js"></script>
+      <script  src="rsa.js"></script>
+
+
+      <script type="text/javascript">
+
+        function print(string)
+        {
+            document.write(string + "\n\n");
+        }
+        
+        var psw = "123456";
+        var rsa = new RSAKey();
+        var key = "b9a725ec20c6bcaed78da3fed32a99e606af3ebe7670bc7082cf6e739bdcba43456fca3519604b0131fc47448dae10d01aef7f1271aa60b21e1c8b2befc6586af46d01f9e15fcd5e24071e22b8279922fa4069831b59d79e97d28a8f6e3f087501417dee9c0bcaea4ffa497876503497167d2dddb9f0f4639655869357615565";
+        rsa.setPublic(key, '10001');
+        var res = rsa.encrypt(psw);
+        print(res);
+        print(res.length);
+        
+        </script>
+
+    </head>
+
+    <body style="font-family: monospace; white-space:pre;">
+
+    </body>
+
+</html>
